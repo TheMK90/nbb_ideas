@@ -20,6 +20,10 @@ alter table ideas
 
 -- 2. Example data --------------------------------------------------------
 
+-- Clear the row left behind by the connection test, so it does not duplicate
+-- the seeded idea of the same name.
+delete from ideas where author = 'Demo';
+
 insert into ideas (title, description, author, category, status, votes, created_at) values
   ('Arabic-first mobile onboarding',
    'Let new customers open an account entirely in Arabic on mobile, including document capture and the terms summary.',
