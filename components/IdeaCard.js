@@ -7,7 +7,7 @@
 /* idea status */
 // import:status
 /* upvoting */
-// import:upvoting
+import UpvoteButton from '@/components/UpvoteButton';
 /* comments */
 // import:comments
 
@@ -31,7 +31,7 @@ export default function IdeaCard({ idea, onChange }) {
       {/* slot:status-control */}
 
       {/* upvoting */}
-      {/* slot:upvote */}
+      <UpvoteButton idea={idea} onChange={onChange} />
 
       {/* comments */}
       {/* slot:comments */}
