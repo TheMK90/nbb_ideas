@@ -9,7 +9,7 @@
 /* upvoting */
 import UpvoteButton from '@/components/UpvoteButton';
 /* comments */
-// import:comments
+import CommentThread from '@/components/CommentThread';
 
 export default function IdeaCard({ idea, onChange }) {
   const created = new Date(idea.created_at).toLocaleDateString();
@@ -34,7 +34,7 @@ export default function IdeaCard({ idea, onChange }) {
       <UpvoteButton idea={idea} onChange={onChange} />
 
       {/* comments */}
-      {/* slot:comments */}
+      <CommentThread idea={idea} onChange={onChange} />
     </article>
   );
 }
