@@ -1,0 +1,46 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: var(--line-soft);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.review { background: #fdf3e2; color: #96650a; }
+.approved { background: #e8f5ec; color: #1a7f3d; }
+.implemented { background: var(--red); color: #fff; }
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+.select {
+  width: auto;
+  padding: 7px 11px;
+  font-size: 13px;
+  border-radius: 999px;
+  background: var(--surface);
+  cursor: pointer;
+}

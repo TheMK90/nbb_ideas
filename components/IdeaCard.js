@@ -5,7 +5,7 @@
 // two feature branches never edit neighbouring lines, and merges stay clean.
 
 /* idea status */
-// import:status
+import { StatusBadge, StatusControl } from '@/components/IdeaStatus';
 /* upvoting */
 import UpvoteButton from '@/components/UpvoteButton';
 /* comments */
@@ -19,7 +19,7 @@ export default function IdeaCard({ idea, onChange }) {
       <h3>
         {idea.title}
         {/* idea status */}
-        {/* slot:status-badge */}
+        <StatusBadge status={idea.status} />
       </h3>
 
       <p className="body">{idea.description}</p>
@@ -28,7 +28,7 @@ export default function IdeaCard({ idea, onChange }) {
       </div>
 
       {/* idea status */}
-      {/* slot:status-control */}
+      <StatusControl idea={idea} onChange={onChange} />
 
       {/* upvoting */}
       <UpvoteButton idea={idea} onChange={onChange} />
