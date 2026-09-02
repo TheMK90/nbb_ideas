@@ -6,6 +6,9 @@ create table if not exists ideas (
   title       text not null,
   description text not null,
   author      text not null,
+  category    text not null default 'Operations'
+              check (category in ('Digital Banking', 'Customer Experience',
+                                  'Operations', 'Sustainability', 'Risk & Compliance')),
   status      text not null default 'Submitted'
               check (status in ('Submitted', 'Under Review', 'Approved', 'Implemented')),
   votes       integer not null default 0,

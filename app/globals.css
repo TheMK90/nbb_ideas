@@ -237,3 +237,12 @@ button:disabled { opacity: 0.55; cursor: default; }
   main { padding: 28px 16px 48px; gap: 32px; }
   .card { padding: 20px; }
 }
+
+.category-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 999px;
+  vertical-align: 0;
+}

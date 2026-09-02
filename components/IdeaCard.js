@@ -10,6 +10,7 @@ import { StatusBadge, StatusControl } from '@/components/IdeaStatus';
 import UpvoteButton from '@/components/UpvoteButton';
 /* comments */
 import CommentThread from '@/components/CommentThread';
+import { CATEGORY_COLORS } from '@/lib/insights';
 
 export default function IdeaCard({ idea, onChange }) {
   const created = new Date(idea.created_at).toLocaleDateString();
@@ -24,6 +25,16 @@ export default function IdeaCard({ idea, onChange }) {
 
       <p className="body">{idea.description}</p>
       <div className="meta">
+        {idea.category && (
+          <>
+            <span
+              className="category-dot"
+              style={{ background: CATEGORY_COLORS[idea.category] || 'var(--ink-faint)' }}
+              aria-hidden="true"
+            />
+            {idea.category} ·{' '}
+          </>
+        )}
         {idea.author} · {created}
       </div>
 
